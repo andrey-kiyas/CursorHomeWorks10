@@ -1,9 +1,15 @@
 package com.CursorHomeWorks10.Entity;
 
+import lombok.*;
+
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
+@Getter
+@Setter
+@ToString
+@NoArgsConstructor
 public class Product {
 
     @Id
@@ -23,61 +29,7 @@ public class Product {
     @JoinColumn(name = "ProductParameter")
     private ProductParameter productParameter;
 
-    public Product() {
-    }
-
     public Product(String productName) {
         this.productName = productName;
-    }
-
-    public Long getProductId() {
-        return productId;
-    }
-
-    public void setProductId(Long productId) {
-        this.productId = productId;
-    }
-
-    public String getProductName() {
-        return productName;
-    }
-
-    public void setProductName(String productName) {
-        this.productName = productName;
-    }
-
-    public List<Category> getCategory() {
-        return category;
-    }
-
-    public void setCategory(List<Category> categories) {
-        this.category = categories;
-    }
-
-    public ProductDescription getProductDescription() {
-        return productDescription;
-    }
-
-    public void setProductDescription(ProductDescription productDescription) {
-        this.productDescription = productDescription;
-    }
-
-    public ProductParameter getProductParameter() {
-        return productParameter;
-    }
-
-    public void setProductParameter(ProductParameter productParameter) {
-        this.productParameter = productParameter;
-    }
-
-    @Override
-    public String toString() {
-        return "Product{" +
-                "ProductId=" + productId +
-                ", ProductName='" + productName +
-                ", categories=" + category +
-                ", productDescription=" + productDescription +
-                ", productParameter=" + productParameter +
-                '}';
     }
 }

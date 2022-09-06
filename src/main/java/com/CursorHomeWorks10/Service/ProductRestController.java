@@ -27,3 +27,4 @@ public class ProductRestController {
         return productService.getProducts();
     }
 }
+
